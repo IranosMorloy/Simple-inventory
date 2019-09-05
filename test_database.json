@@ -1,0 +1,19 @@
+{
+  "0": {
+    "name": "",
+    "vtip": "",
+    "icon":  "res://slot.png",
+  },
+
+  "1": {
+    "name": "Nic",
+    "vtip": "dosel",
+    "icon":  "res://p1 (2).png"
+  },
+
+  "2": {
+    "name": "Skoro",
+    "vtip": "Neni",
+    "icon":  "res://icon.png"
+  }
+}
