@@ -2,18 +2,24 @@
   "0": {
     "name": "",
     "vtip": "",
-    "icon":  "res://slot.png",
+    "icon": "res://slot.png"
   },
 
   "1": {
-    "name": "Nic",
+    "name": "Planet",
     "vtip": "dosel",
-    "icon":  "res://p1 (2).png"
+    "icon": "res://p1 (2).png"
   },
 
   "2": {
-    "name": "Skoro",
+    "name": "Mr. Godot",
     "vtip": "Neni",
-    "icon":  "res://icon.png"
+    "icon": "res://icon.png"
+  },
+
+  "3": {
+    "name": "Locked",
+    "vtip": "Neni",
+    "icon": "res://018.png"
   }
 }

@@ -2,7 +2,9 @@ extends TextureRect
 
 signal slot_pressed
 signal moving_item
+signal item_preview
 
+var window = null
 var texture_path = null		#updated by the inventory script as well as var item_id
 var item_id = "0"
 
@@ -35,8 +37,12 @@ func _ready():
 		#Because try to load a null path...
 
 func _on_TextureButton_pressed():
+	if item_id != "0":
+		if get_parent().get_parent().get_parent().get_parent().rmb_pressed == true:
+			emit_signal("item_preview", item_id)
+			return
 	if get_parent().get_parent().get_parent().get_parent().is_dragging == true:
-		emit_signal("moving_item", name)
+		emit_signal("moving_item", name, window)
 		return
 		#If you are already dragging an item, you should not start to drag another one. Usually it is about droping
 		#the item somewhere.
@@ -44,5 +50,5 @@ func _on_TextureButton_pressed():
 		if item_id == "0":
 			#Empty slot item is hard to see in general. This item still doesn't have any values anyway.
 			return
-		emit_signal("slot_pressed", name)
+		emit_signal("slot_pressed", name, window)
 		#So you haven't been dragging anything, but you pressed the item..., so you want to drag an item in the end, right?
